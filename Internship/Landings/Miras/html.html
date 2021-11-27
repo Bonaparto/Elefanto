@@ -6,6 +6,34 @@
         <title>MirasHills</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        <script>
+            first_click1 = true;
+            first_click2 = true;
+            function clean(n) {
+                inp1 = document.getElementById("input1");
+                inp2 = document.getElementById("input2");
+                if(n == '1' && first_click1) {
+                    inp1.value = '';
+                    first_click1 = false;
+                } else if(n == '2' && first_click2){
+                    inp2.value = '';
+                    first_click2 = false;
+                } else if(n == '3'){
+                    if(inp1.value == '' || inp2.value == '' || first_click1 || first_click2) {
+                        return
+                    };
+                    document.getElementById("input1").value = '';
+                    document.getElementById("input2").value = '';
+                }
+            }
+
+            function change_photos(n) {
+                for(let i = 1; i <= 3; ++i) {
+                    document.getElementById("block7image" + i).src = "images/block7/button" + n + '/' + i + ".png";
+                    console.log(document.getElementById("block7image" + i).src);
+                }
+            }
+        </script>
     </head>
 
     <body>
@@ -20,13 +48,13 @@
                         <p id="location">Локация</p>
                         <p id="build">Строительство</p>
                         <p id="contacts">Контакты</p>
+                        <div class="main_phone">
+                            <img src="images/block1/phone.png" width="10%"/>
+                            8 777 707 70 07
+                        </div>
                     </header>
-                    <div class="main_phone">
-                        <img src="images/block1/phone.png" width="20px"/>
-                        8 777 707 70 07
-                    </div>
                     <div class="main_image">
-                        <img src="images/block1/div1title.png" width="315px" height="138px"/>
+                        <img src="images/block1/div1title.png" width="365px" height="160px"/>
                     </div>
                     <p class="main_text">ДОБРО ПОЖАЛОВАТЬ ДОМОЙ</p>
                 </div>
@@ -104,8 +132,51 @@
                     <li>Первый Парк Президента</li>
                 </ol>
             </div>
-            <div class="block6">
-                
+            <div class="block6 common_text">
+                <div class="block6_form">
+                    <p>Перезвонить мне</p>
+                    <input id="input1" type="text" placeholder="Имя"> <br>    
+                    <input id="input2" type="text" placeholder="Телефон"> <br>
+                    <button onclick="clean('3')">Отправить</button>
+                </div>
+            </div>
+            <div class="block7 common_screen common_text">
+                <p>ПЛАНИРОВКИ</p>
+                <div class="block7_buttons">
+                    <button onclick="change_photos('1');">100 кв м²</button>
+                    <button onclick="change_photos('2');">150 кв м²</button>
+                    <button onclick="change_photos('3');">200 кв м²</button>
+                </div>
+                <div class="block7_images">
+                    <div class="block7_image1">
+                        <img id="block7image1" src="images/block7/button1/1.png" width="80%">
+                        <p>Первый этаж</p>
+                    </div>
+                    <div class="block7_image2">
+                        <img id="block7image2" src="images/block7/button1/2.png" width="80%">
+                        <p>Второй этаж</p>
+                    </div>
+                    <div class="block7_image3">
+                        <img id="block7image3" src="images/block7/button1/3.png" width="80%">
+                        <p>Терасса</p>
+                    </div>
+                </div>
+            </div>
+            <div class="block8 common_screen">
+                <div class="block8_back">
+                </div>
+                <img id="block8_icon1" src="images/block8/icons/icon1.png"> 
+                <img id="block8_icon2" src="images/block8/icons/icon2.png"> 
+                <img id="block8_icon3" src="images/block8/icons/icon3.png"> 
+            </div>
+            <div class="block9">
+                <p class="block9_h1">
+                    Коттеджная вилла «Miras Hills» - оазис спокойствия.
+                </p>
+                <div class="block9_lower">
+                    <p class="block9_text"> </p>
+                </div>
+
             </div>
         </div>
     </body>
