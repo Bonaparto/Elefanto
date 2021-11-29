@@ -4,10 +4,6 @@ body {
     background-color: black;
 }
 
-/* html { 
-    overflow: hidden;
-}  */
-
 ::-webkit-scrollbar {
     width: 0;
 }
@@ -24,57 +20,53 @@ body {
     letter-spacing: 0.05rem;
 }
 
-.common_screen {
-    width: 100vw;
-    /* height: 100vh; */
-}
-
 .main {
     position: relative; 
     background-image: url("images/block1/back.png");
     background-size: 100% 100%;
     text-align: center;
+    color: #FFFFFF;
 }
 
 .main_cover {
-    content: ''; 
     position: absolute;
     top: 0px;
     right: 0px;
     opacity: 90%;
     background-color:#1C2426B2;
+    width: 100%;
+    height: 100%;
 }
 
-.main_content {
-    color: #FFFFFF;
-    /* position: absolute;
-    top: 0px;
-    right: 0px;
-    display: flex;
-    flex-direction: column; */
-}
+.main_content { 
+    position: relative;
+    z-index: 2;
+} 
 
 .main_head {
-    font-size: 1.1rem;
-    padding: 1% 20% 5% 20%;
+    font-size: 1vw;
+    padding: 2% 20% 5% 20%;
     display: flex;
     justify-content: space-evenly;
 }
 
+.main a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
 
 .main_phone {
     position: absolute;
     top: 4%;
     right: 3%;
-    font-size: 1rem;
 }
 
 .main_image {
-    padding: 7% 0px 0px 0px;
+    padding-top: 7%;
 }
 
 .main_text {
-    font-size: 4rem;
+    font-size: 4vw;
     padding: 5vw 0vw 20vw 0vw;
     margin: 0px;
 }
@@ -84,36 +76,33 @@ body {
     background-color: #192326;
     display: flex;
     flex-direction: row;
+    padding: 3vw 0vw;
 }
 
 .block2_left {
     display: flex;
-    height: 99vh;
-    width: 45vw;
-    padding: 5vh 3vw 0vh 3vw; 
-    margin: 0px;
+    align-items: center;
+    margin: 5vw 0vw 0vh 3vw; 
+    /* margin-right: 20vw; */
+}
+
+.block2_left > img {
+    width: 40vw;
+    /* min-width: 100vw; */
 }
 
 .block2_center {
-    display: flex;
-    flex-direction: column;
-    height: 99vh;
-    width: 10vw;
-    padding-top: 6vh;
-    margin: 0px;
+    display: inline;
+    /* width: 10vw; */
 }
 
 .block2_center > img {
     width: 7vw;
-    padding: 7vh 0vw;
+    padding: 5vw 0vw 1vw 0vw;
 }
 
 .block2_right {
-    display: flex;
-    flex-direction: column;
-    height: 99vh;
-    width: 40vw;
-    padding-left: 3vw;
+    padding: 0vw 3vw;
 }
 
 .block2_three {
@@ -121,47 +110,39 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: left;
+    column-gap: 2vw;
     width: 30vw;
     margin-left: -3.5vw;
     font-size: 2rem;
     color: #DBB37A;
 }
 
-.block2_three > img {
-    padding-right: 2vw;
-}
-
-.block2_text {
-    height: 55vh;
-    width: 40vw;
-    padding-right: 5vw;
-}
-
 .block2_text > h3 {
     margin: 0px;
-    padding: 3vh 0vw;
-    font-size: 1.5rem;
+    padding: 2.5vw 0vw;
+    font-size: 1.5vw;
     color: white;
 }
 
 .block2_text > p {
-    font-size: 1.3rem;
+    font-size: 1.1vw;
     font-weight: 400;
     color: #DBB37A;
+    margin: 0px;
 }
 
 .block4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 99vw;
-    height: 50vh;
     text-align: center;
     background-color: #192326;
+    padding: 4vw 20vw;
+
 }
 
 .block4_head {
-    font-size: 2.5rem;
+    font-size: 2.5vw;
     font-weight: 700;
     color: #DBB37A;
     padding: 0px;
@@ -169,10 +150,9 @@ body {
 }
 
 .block4_text {
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     font-weight: 400;
     color: white;
-    width: 55vw;
 }
 
 .block5 {
@@ -184,7 +164,7 @@ body {
     font-size: 1.6rem;
     font-weight: 400;
     letter-spacing: 0.05rem;
-    padding-top: 0px;
+    padding: 3vw 0vw;
 }
 
 .block5 img {
@@ -199,26 +179,22 @@ body {
 
 .block5 li {
     counter-increment: item;
-    padding-bottom: 2.1vh;
+    padding: 0.45vw 0vw;
+    font-size: 1.4vw;
 }
 
 .block5 li:before {
     margin-right: 10px;
     content: counter(item);
     border-radius: 100%;
-    border: 1px solid #DBB37A;
+    border: 2px solid #DBB37A;
     color: #DBB37A;
-    width: 1.2em;
+    width: 2vw;
     text-align: center;
     display: inline-block;
-    font-size: 1rem;
-    font-weight: 400;
-    padding: 0.1rem;
 }
 
 .block6 {
-    width: 99vw;
-    height: 40vh;
     padding: 5vh 0vw;
     color: white;
     background-image: url(images/block6/back.png);
@@ -228,15 +204,15 @@ body {
 .block6_form {
     font-size: 2.5rem;
     width: 50vw;
-    height: 40vh;
     margin: 0vh 5vh;
     border-radius: 20px;
     background-color: #1C2426;
 }
 
-.block6 p{
-    margin: 0px;
-    padding: 3vh 0vw 3vh 3vw;
+.block6 * {
+    margin: 0px; 
+    margin-left: 3vw;
+    padding: 1vw 0px 1.5vw 0vw;
 }
 
 .block6 input {
@@ -246,18 +222,16 @@ body {
     margin-left: 3vw;
     color: #8E8E8E;
     font-size: 1.75rem;
-    margin-bottom: 3vh;
     border-bottom: 2px solid; 
 }
+
 .block6 input:focus {
     outline-width: 0;
 }
 
 .block6 button {
-    height: 5vh;
-    width: 10vw;
-    margin-left: 3vw;
-    margin-top: 1vh;
+    margin-top: 3vw;
+    padding: 0.3vw 0.7vw;
     border: 3px solid #DCDCDC;
     border-radius: 10px;
     color: #B0B0B0;
@@ -273,7 +247,6 @@ body {
 }
 
 .block7 {
-    height: 110vh;
     background-color: #1C2426;
     text-align: center;
     color: #DBB37A;
@@ -288,28 +261,26 @@ body {
 .block7_images {
     display: flex;
     flex-direction: row; 
-    align-content: center;    
-    align-items: center;
     justify-content: center;
 }
 
 
 .block7_images > * {
-    width: 20vw;
-    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
     margin: 5vh 2vw 0vh 2vw;
     background-color: #FFFFFF;
     border: 3px solid #FFFFFF;
     border-radius: 10px;
-}
-
-.block7_images p {
-    font-size: 1.5rem;
-    padding-top: 3vh;
+    width: 20vw;
+    font-size: 1.5vw;
 }
 
 .block7_images img {
-    padding-top: 5vh;
+    padding: 2vw 2vw 8vw 2vw;
+    width: 15vw;
 }
 
 .block7 button {
@@ -338,8 +309,8 @@ body {
 .block8_back {
     /* position: relative; */
     margin: auto;
-    width: 90vw;
-    height: 95vh;
+    /* width: 90vw; */
+    /* height: 95vh; */
     background-image: url(images/block8/back.png);
     background-size: 100% 100%;
 }
@@ -362,13 +333,13 @@ body {
 
 .block9 {
     width: 99vw;
-    height: 70vh;
+    /* height: 70vh; */
     background-color: #192326;
 }
 
 .block9_lower {
     width: 99vw;
-    height: 60vh;
+    /* height: 60vh; */
     background-image: url(images/block9/back.png);
     background-size: 100% 100%;
 }
