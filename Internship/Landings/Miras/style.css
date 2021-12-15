@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     padding: 0px;
     margin: 0px;
@@ -14,7 +18,7 @@ body {
 }
 
 .common_text {
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-weight: bold;
     font-style: normal;
     letter-spacing: 0.05rem;
@@ -51,9 +55,16 @@ body {
 }
 
 .main a {
+    border-style: hidden;
     text-decoration: none;
     color: #FFFFFF;
+    /* transition: 0.3s all ease-in-out; */
 }
+
+.main a:hover {
+    border-style: initial;
+    border-bottom: 3px solid #DBB37A;
+}   
 
 .main_phone {
     position: absolute;
@@ -83,17 +94,14 @@ body {
     display: flex;
     align-items: center;
     margin: 5vw 0vw 0vh 3vw; 
-    /* margin-right: 20vw; */
 }
 
 .block2_left > img {
     width: 40vw;
-    /* min-width: 100vw; */
 }
 
 .block2_center {
     display: inline;
-    /* width: 10vw; */
 }
 
 .block2_center > img {
@@ -302,44 +310,70 @@ body {
 
 .block8 {
     background-color: #1C2426; 
-    align-items: center;
+    text-align: center;
     position: relative;
+    color: #FFFFFF; 
+    font-family: 'Open Sans';
 }
 
-.block8_back {
-    /* position: relative; */
-    margin: auto;
-    /* width: 90vw; */
-    /* height: 95vh; */
-    background-image: url(images/block8/back.png);
-    background-size: 100% 100%;
+.block8 > div > div {
+    text-align: justify;
+    background-color:#192326;
+    border-radius: 3%;
+    padding: 1px;
+    font-size: 0.9vw;
+    width: 30vw;
+    transition: 0.5s all;
+    opacity: 0;
+    visibility: hidden;
 }
 
-/* #block8_icon1 {
+.block8 > div > img:hover ~ div{
+    opacity: 1;
+    visibility: visible;
+}
+
+.block8 > div > img {
+    width: 5vw;
+}
+
+.block8 > div > div > * {
+    margin: 1vw;
+}
+
+.block8 > div > * {
+    padding: 1vw;
+} 
+
+.block8_main_image {
+    padding: 6vw;
+    height: 40vw;
+    width: 75vw;
+}
+
+.block8_icon_home {
     position: absolute;
-    top: 10vh;
+    top: 20vw;
+    left: 20vw;
 }
 
-#block8_icon2 {
+.block8_icon_sun {
     position: absolute;
-    top: 5vh;
-}  */
+    top: 10vw;
+    left: 55vw;
+}  
 
-/* .block8 img {
-    width: 90vw;
-    height: 95vh;
-    padding-left: 4.5vw; 
-} */
+.block8_icon_key {
+    position: absolute;
+    top: 27vw;
+    left: 50vw;
+}
 
 .block9 {
-    width: 99vw;
-    /* height: 70vh; */
     background-color: #192326;
 }
 
 .block9_lower {
-    width: 99vw;
-    /* height: 60vh; */
     background-image: url(images/block9/back.png);
     background-size: 100% 100%;
 }

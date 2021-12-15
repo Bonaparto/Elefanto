@@ -6,34 +6,6 @@
         <title>MirasHills</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
-        <script>
-            first_click1 = true;
-            first_click2 = true;
-            function clean(n) {
-                inp1 = document.getElementById("input1");
-                inp2 = document.getElementById("input2");
-                if(n == '1' && first_click1) {
-                    inp1.value = '';
-                    first_click1 = false;
-                } else if(n == '2' && first_click2){
-                    inp2.value = '';
-                    first_click2 = false;
-                } else if(n == '3'){
-                    if(inp1.value == '' || inp2.value == '' || first_click1 || first_click2) {
-                        return
-                    };
-                    document.getElementById("input1").value = '';
-                    document.getElementById("input2").value = '';
-                }
-            }
-
-            function change_photos(n) {
-                for(let i = 1; i <= 3; ++i) {
-                    document.getElementById("block7image" + i).src = "images/block7/button" + n + '/' + i + ".png";
-                    console.log(document.getElementById("block7image" + i).src);
-                }
-            }
-        </script>
     </head>
 
     <body>
@@ -43,11 +15,21 @@
                 </div>
                 <div class="main_content">
                     <header class="main_head">
-                        <a href="about">О нас</a>
-                        <a href="presentation">Презентация</a>
-                        <a href="location">Локация</a>
-                        <a href="build">Строительство</a>
-                        <a href="contacts">Контакты</a>
+                        <div>
+                            <a href="#about">О нас</a>
+                        </div>
+                        <div>
+                            <a href="#presentation">Презентация</a>
+                        </div>
+                        <div>
+                            <a href="#location">Локация</a>
+                        </div>
+                        <div>
+                            <a href="#building">Строительство</a>
+                        </div>
+                        <div>
+                            <a href="#contacts">Контакты</a>
+                        </div>
                         <div class="main_phone">
                             <img src="images/block1/phone.png" width="10%"/>
                             8 777 707 70 07
@@ -55,8 +37,8 @@
                     </header>
                     <div class="main_image">
                         <img src="images/block1/div1title.png" width="365px" height="160px"/>
+                        <p class="main_text">ДОБРО ПОЖАЛОВАТЬ ДОМОЙ</p>
                     </div>
-                    <p class="main_text">ДОБРО ПОЖАЛОВАТЬ ДОМОЙ</p>
                 </div>
             </div>
             <div class="common_text block2">
@@ -96,7 +78,7 @@
                     </div>
                 </div>
             </div>
-            <div class="block4 common_text">
+            <div class="block4 common_text" id="location">
                 <p class="block4_head">ЛОКАЦИЯ</p>
                 <p class="block4_text">
                     Коттеджная вилла «Miras Hills» расположена среди холмов в экологически чистом 
@@ -110,7 +92,7 @@
                     являющиеся одним из любимейших мест отдыха его жителей.
                 </p>
             </div>
-            <div class="block5  en">
+            <div class="block5">
                 <img src="images/block5/map.png" width="65%" height="90%">
                 <ol>
                     <li>Miras Hills</li>
@@ -162,14 +144,31 @@
                     </div>
                 </div>
             </div>
-            <div class="block8  en">
-                <div class="block8_back">
+            <div class="block8">
+                <img class=block8_main_image src="images/block8/back.png">
+                <div class="block8_icon_home">
+                    <img src="images/block8/icons/icon1.png"> 
+                    <div>
+                        <h3>Расположение</h3>
+                        <p>Коттеджная вилла «Miras Hills» расположена среди холмов в экологически чистом районе города. Растущая популярность этого района объясняется не только экологическими условиями, но и уникальной красотой пейзажей. Завораживающие виды, обилие ярких натуральных красок, свежий воздух - все это создает ощущение настоящей сказки. Одна из особенностей «Miras Hills», подарившая ему это прекрасное название – прекрасные холмы естественного происхождения, обрамляющие виллу и безусловно, являющиеся одним из любимейших мест отдыха его жителей.</p>
+                    </div>
                 </div>
-                <img id="block8_icon1" src="images/block8/icons/icon1.png"> 
-                <img id="block8_icon2" src="images/block8/icons/icon2.png"> 
-                <img id="block8_icon3" src="images/block8/icons/icon3.png"> 
+                <div class="block8_icon_sun">
+                    <img src="images/block8/icons/icon2.png"> 
+                    <div>
+                        <h3>Природа</h3>
+                        <p>«Miras Hills» - это идеальное соотношение великолепия природы и высокого уровня комфорта. Он обладает полноценной развитой инфраструктурой: здесь подведены все необходимые инженерные коммуникации – энергоснабжение, водопровод центральная канализация, магистральное газоснабжение. Периметр виллы обнесен капитальным ограждением, на въезде работает оборудованный контрольно-пропускной пункт, осуществляется круглосуточное патрулирование территории. Для активного отдыха на территории «Miras Hills» предусмотрены спортивные площадки, благоустроенные рекреационные зоны. </p>
+                    </div>
+                </div>
+                <div class="block8_icon_key">
+                    <div>
+                        <h3>Расположение</h3>
+                        <p>Особую привлекательность КВ «Miras Hills» придает не только его месторасположение,но и прекрасная транспортная доступность: дорога до центра города вряд ли займет у Вас более получаса. Кроме того, район Мирас активно развивается и с каждым годом становится все популярнее и престижнее.</p>
+                    </div>
+                    <img src="images/block8/icons/icon3.png"> 
+                </div>
             </div>
-            <div class="block9">
+            <!-- <div class="block9">
                 <p class="block9_h1">
                     Коттеджная вилла «Miras Hills» - оазис спокойствия.
                 </p>
@@ -177,7 +176,42 @@
                     <p class="block9_text"> </p>
                 </div>
 
-            </div>
+            </div> -->
         </div>
+        <script>
+            // first_click1 = true;
+            // first_click2 = true;
+            // function clean(n) {
+            //     inp1 = document.getElementById("input1");
+            //     inp2 = document.getElementById("input2");
+            //     if(n == '1' && first_click1) {
+            //         inp1.value = '';
+            //         first_click1 = false;
+            //     } else if(n == '2' && first_click2){
+            //         inp2.value = '';
+            //         first_click2 = false;
+            //     } else if(n == '3'){
+            //         if(inp1.value == '' || inp2.value == '' || first_click1 || first_click2) {
+            //             return
+            //         };
+            //         document.getElementById("input1").value = '';
+            //         document.getElementById("input2").value = '';
+            //     }
+            // }
+
+            function change_photos(n) {
+                for(let i = 1; i <= 3; ++i) {
+                    document.getElementById("block7image" + i).src = "images/block7/button" + n + '/' + i + ".png";
+                    console.log(document.getElementById("block7image" + i).src);
+                }
+            }
+
+            // $(".block8").mousemove(function(e) {
+            //     console.log(val($(e.target).attr("class")));
+            // });
+
+
+
+        </script>
     </body>
 </html>
