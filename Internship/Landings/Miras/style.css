@@ -315,6 +315,7 @@ body {
     color: #FFFFFF; 
     font-family: 'Open Sans';
     cursor: default;
+    /* word-spacing: -1px; */
 }
 
 .block8 > div > div {
