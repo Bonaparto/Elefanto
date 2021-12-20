@@ -314,6 +314,7 @@ body {
     position: relative;
     color: #FFFFFF; 
     font-family: 'Open Sans';
+    cursor: default;
 }
 
 .block8 > div > div {
@@ -325,12 +326,6 @@ body {
     width: 30vw;
     transition: 0.5s all;
     opacity: 0;
-    visibility: hidden;
-}
-
-.block8 > div > img:hover ~ div{
-    opacity: 1;
-    visibility: visible;
 }
 
 .block8 > div > img {
@@ -367,6 +362,10 @@ body {
     position: absolute;
     top: 27vw;
     left: 50vw;
+}
+
+.vis {
+    opacity: 1 !important;
 }
 
 .block9 {
