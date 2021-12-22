@@ -1,3 +1,5 @@
+@import './css/swiper-bundle.css';
+
 html {
     scroll-behavior: smooth;
 }
@@ -138,6 +140,11 @@ body {
     color: #DBB37A;
     margin: 0px;
 }
+
+/* .swiper {
+    width: 600px;
+    height: 300px;
+} */
 
 .location {
     display: flex;

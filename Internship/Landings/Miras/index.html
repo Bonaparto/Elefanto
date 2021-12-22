@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 
-
 <html>
 
     <head>
         <title>MirasHills</title>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     </head>
-
+    
     <body>
         <div class="common">
             <section class="main common-text">
@@ -79,7 +79,43 @@
                     </div>
                 </div>
             </section>
-            <section class="location common-text" id="location">
+            <section class="slider">
+                <div class="swiper">
+                    <div class="image-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="image-slider__image"><img src="images/slider/slider (1).png"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="image-slider__image"><img src="images/slider/slider (2).png"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="image-slider__image"><img src="images/slider/slider (3).png"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="image-slider__image"><img src="images/slider/slider (4).png"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="image-slider__image"><img src="images/slider/slider (5).png"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="image-slider__image">
+                                    <img src="images/slider/slider (6).png">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="image-slider__image">
+                                    <img src="images/slider/slider (7).png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+             <section class="location common-text" id="location">
                 <h2 class="location__title">ЛОКАЦИЯ</h2>
                 <p class="location__text">
                     Коттеджная вилла «Miras Hills» расположена среди холмов в экологически чистом 
@@ -87,7 +123,7 @@
                     экологическими условиями, но и уникальной красотой пейзажей. Завораживающие 
                     виды, обилие ярких натуральных красок, свежий воздух - все это создает ощущение 
                     настоящей сказки.<br><br>
-
+                    
                     Одна из особенностей «Miras Hills», подарившая ему это прекрасное название –
                     прекрасные холмы естественного происхождения, обрамляющие виллу и безусловно,
                     являющиеся одним из любимейших мест отдыха его жителей.
@@ -110,10 +146,10 @@
                     <li>«MCD» медициский центр дерматологии</li>    
                     <li>«LURYE CLINIC» центр интегративной
                         медицины</li>
-                    <li>Private Clinic Almaty</li>
-                    <li>Жайлау</li>
-                    <li>Первый Парк Президента</li>
-                </ol>
+                        <li>Private Clinic Almaty</li>
+                        <li>Жайлау</li>
+                        <li>Первый Парк Президента</li>
+                    </ol>
             </section>
             <section class="callback common-text">
                 <div class="callback__form">
@@ -179,47 +215,25 @@
 
             </div> -->
         </div>
-        <script>
-            // first_click1 = true;
-            // first_click2 = true;
-            // function clean(n) {
-            //     inp1 = document.getElementById("input1");
-            //     inp2 = document.getElementById("input2");
-            //     if(n == '1' && first_click1) {
-            //         inp1.value = '';
-            //         first_click1 = false;
-            //     } else if(n == '2' && first_click2){
-            //         inp2.value = '';
-            //         first_click2 = false;
-            //     } else if(n == '3'){
-            //         if(inp1.value == '' || inp2.value == '' || first_click1 || first_click2) {
-            //             return
-            //         };
-            //         document.getElementById("input1").value = '';
-            //         document.getElementById("input2").value = '';
-            //     }
-            // }
+        <script src="functions.js"></script>
+        
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script> 
+            var swiper = new Swiper('.image-slider', {
+                slidesPerView: 5,
 
-            let hidden_divs = document.querySelectorAll('.pop-up > div');
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
 
-            for(let i = 0; i < hidden_divs.length; ++i) {
-                let hidden_div = hidden_divs[i].querySelector('div');
-                let img = hidden_divs[i].querySelector('img');
-                img.addEventListener('mouseover', () => {
-                    hidden_div.classList.add("vis");
-                });
-                img.addEventListener('mouseout', () => {
-                    hidden_div.classList.remove("vis");
-                })
-            }
-                
-            function change_photos(n) {
-                for(let i = 1; i <= 3; ++i) {
-                    document.getElementById("layouts__image" + i).src = "images/layouts/button" + n + '/' + i + ".png";
-                }
-            }
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,  
+                },
 
 
+            });
         </script>
-    </body>
+    </body> 
 </html>
