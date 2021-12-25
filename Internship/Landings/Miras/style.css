@@ -92,7 +92,6 @@ h2 {
 
 .advantages {
     position: relative;
-    
     display: flex;
     flex-direction: row;
     padding: 3vw 0vw;
@@ -149,7 +148,6 @@ h2 {
 
 .swiper {
     position: relative;
-    
 }
 
 .swiper > h2 {
@@ -157,12 +155,13 @@ h2 {
 }
 
 .image-slider {
-    margin-left: 3vw;
+    margin-left: 2vw;
     margin-bottom: 5vw;
 }
 
 .image-slider__image > img {
-    height: 25vw;   
+    height: 30vw;   
+    width: 20vw;
 }
 
 .swiper-button-next::after,
@@ -207,9 +206,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    
     padding: 4vw 20vw;
-
 }
 
 .location__title {
@@ -224,7 +221,6 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    
     color: white;
     font-size: 1.6rem;
     font-weight: 400;
