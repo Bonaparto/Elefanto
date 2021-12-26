@@ -153,12 +153,13 @@ h2 {
 }
 
 .image-slider {
-    margin-left: 3vw;
+    margin-left: 2vw;
     margin-bottom: 5vw;
 }
 
 .image-slider__image > img {
-    height: 25vw;   
+    height: 30vw;   
+    width: 20vw;
 }
 
 .swiper-button-next::after,
