@@ -298,7 +298,7 @@ h2 {
     letter-spacing: 0.07rem;
 }
 
-.form-button:hover {
+.form-button button:hover {
     background-color: #63BBE2;
     border-color: #63BBE2;
     color: #FFFFFF;
@@ -441,24 +441,37 @@ h2 {
     margin-bottom: 3vw;
 }
 
-.contacts .contacts__form-and-map {
+.contacts__form-and-map {
     display: flex;
     flex-direction: row;
+    margin: 0px 10vw 5vw;
 }
 
-.contacts .contacts__form {
-    margin-left: 10vw;
+.contacts__form .form {
+    background-color: #192326;
+    margin: 0px;
 }
 
 .contacts .form > * {
     font-size: 1.5vw;
+    background-color: #192326;
+}
+
+.contacts .form > button { 
+    background-color: #DCDCDC;
+}
+
+.contacts .form > button:hover { 
+    background-color: #63BBE2;
+    border-color: #63BBE2;
+    color: #FFFFFF;
 }
 
 .contacts__icons {
     margin-top: 3vw;
 }
 
-.contacts__form > .form > .contacts__icons > * {
+.contacts__icons > * {
     margin: 0.5vw;
 }
 
@@ -466,10 +479,29 @@ h2 {
     filter: invert(39%) sepia(86%) saturate(1748%) hue-rotate(165deg) brightness(100%) contrast(101%);
 }
 
-.contact > * {
-    display: inline-block;
+.contacts__map { 
+    background-color: #182021;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2vw;
+}
+
+.contact > p {
+    margin: 0px;
+    padding: 0px;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 1.1vw;
 }
 
 .contact > img { 
-    height: 1.1vw;
+    height: 2vw;
+    margin-right: 1vw;
+}
+
+footer {
+    position: relative;
 }
