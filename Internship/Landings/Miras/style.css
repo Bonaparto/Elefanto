@@ -126,7 +126,6 @@ h2 {
     column-gap: 2vw;
     width: 30vw;
     margin-left: -3.5vw;
-    /* font-size: 2rem; */
     color: #DBB37A;
 }
 
@@ -277,11 +276,11 @@ h2 {
     padding-bottom: 0.3vw;
 }
 
-.callback input:focus {
+.form input:focus {
     outline-width: 0;
 }
 
-.callback p { 
+.form p { 
     padding-top: 2vw;
     padding-bottom: 1vw;
 }
@@ -298,7 +297,7 @@ h2 {
     letter-spacing: 0.07rem;
 }
 
-.form-button button:hover {
+.form button:hover {
     background-color: #63BBE2;
     border-color: #63BBE2;
     color: #FFFFFF;
@@ -437,7 +436,7 @@ h2 {
 }
 
 .contacts > h2 {
-    color: black;
+    color: #0A0909;
     margin-bottom: 3vw;
 }
 
@@ -461,7 +460,7 @@ h2 {
     background-color: #DCDCDC;
 }
 
-.contacts .form > button:hover { 
+.form > button:hover { 
     background-color: #63BBE2;
     border-color: #63BBE2;
     color: #FFFFFF;
@@ -486,7 +485,7 @@ h2 {
 .contact {
     display: flex;
     flex-direction: row;
-    margin-top: 2vw;
+    margin: 2vw;
 }
 
 .contact > p {
@@ -494,14 +493,41 @@ h2 {
     padding: 0px;
     color: #FFFFFF;
     font-weight: 400;
-    font-size: 1.1vw;
+    font-size: 0.8vw;
 }
 
 .contact > img { 
-    height: 2vw;
+    height: 1vw;
     margin-right: 1vw;
 }
 
 footer {
     position: relative;
+    background-color: #1C2426;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
+
+footer > * {
+    margin: 1.5vw 0px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer ul a {
+    text-decoration: none;
+    color: #FFFFFF;
+    margin: 0px 2vw;
+    font-size: 1vw;
+    border: hidden;
+}
+
+footer ul a:hover {
+    border-style: initial;
+    border-bottom: 3px solid #DBB37A;
+} 
